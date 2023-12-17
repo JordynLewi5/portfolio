@@ -1,0 +1,10 @@
+.type-writter {
+    display: flex;
+
+    .cursor {
+        position: relative;
+        width: .5ch;
+        top: .05ch;
+        left: .05ch;
+    }
+}
