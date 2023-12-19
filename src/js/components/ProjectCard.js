@@ -1,24 +1,41 @@
-import { useEffect, useState } from "react"
+import { useRef, useEffect, useState } from "react";
 
 function ProjectCard(props) {
+    const elementRef = useRef(null);
     const [visibility, setVisibility] = useState(false);
     const [scrollY, setScrollY] = useState(0);
-
-    window.addEventListener("scroll", () => {
-        setScrollY(window.scrollY);
-    });
+    const [elementYOffset, setElementYOffset] = useState(null);
 
     useEffect(() => {
-        if (scrollY > props.scrollYThreshold + props.offset) {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (elementRef.current) {
+            const yOffset = elementRef.current.getBoundingClientRect().top + window.scrollY;
+            setElementYOffset(yOffset);
+        }
+
+        const threshold = props.scrollYThreshold ? props.scrollYThreshold + props.offset : elementYOffset + props.offset;
+
+        if (elementYOffset && scrollY > threshold) {
             setVisibility(true);
         }
-    }, [scrollY])
-    
+    }, [scrollY]);
+
     return (
-        <a href={props.href} target="__" className={`project-card ${visibility ? 'slide-in' : 'slide-out'}`}>
+        <a href={props.href} target="__" className={`project-card ${visibility ? 'slide-in' : 'slide-out'}`} ref={elementRef}>
             {props.children}
         </a>
-    )
+    );
 }
 
-export default ProjectCard
+export default ProjectCard;

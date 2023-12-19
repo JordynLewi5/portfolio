@@ -1,7 +1,15 @@
-import { useEffect, useState } from "react"
+import { useRef, useEffect, useState } from "react"
 import sleep from "js/Utils/sleep"
 
 function TypeWriter(props) {
+    const [typedText, setTypedText] = useState('')
+    const [cursor, setCursor] = useState('|')
+
+    const elementRef = useRef(null);
+    const [visibility, setVisibility] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+    const [elementYOffset, setElementYOffset] = useState(null);
+
     async function asyncTypeLoop(duration) {
         const items = props.text.split('');
         for (let item of items) {
@@ -10,7 +18,7 @@ function TypeWriter(props) {
         }
     }
 
-    async function asyncCursorBlink(duration = 500) {
+    async function asyncCursorBlink(duration = 750) {
         while (true) {
             setCursor('|');
             await sleep(duration);
@@ -20,36 +28,61 @@ function TypeWriter(props) {
     }
 
     async function asyncTypeWriter() {
-        await sleep(500);
+        await sleep(100);
         setTypedText('')
         asyncTypeLoop(props.duration).then(() => {
             asyncCursorBlink();
         });
     }
 
-    const [typedText, setTypedText] = useState('')
-    const [cursor, setCursor] = useState('|')
-
-    const [visibility, setVisibility] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
-
-    window.addEventListener("scroll", () => {
-        setScrollY(window.scrollY);
-    });
-
+    // Create a scroll listener
     useEffect(() => {
-        if (!visibility && scrollY >= props.scrollYThreshold) {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    // Set the element's y offset and check if it's visible on the page, 
+    // if it isn't, start the type writer.
+    useEffect(() => {
+        if (elementRef.current) {
+            const yOffset = elementRef.current.getBoundingClientRect().top + window.scrollY;
+            setElementYOffset(yOffset);
+        }
+
+        let threshold;
+        if (props.scrollYThreshold === undefined) {
+            threshold = elementYOffset + props.offset;
+        } else {
+            threshold = props.scrollYThreshold + props.offset;
+        }
+
+        if (!visibility && elementYOffset && scrollY >= threshold) {
             setVisibility(true);
             asyncTypeWriter();
         }
-    }, [scrollY, props.text, props.duration])
+    }, [scrollY]);
+
+    // If the scrollYThreshold is 0, start the type writer.
+    useEffect(() => {
+        if (props.scrollYThreshold === 0) {
+            setVisibility(true);
+            asyncTypeWriter();
+        }
+    }, []);
 
     return (
-        <div className={`${props.className} type-writter`}>
+        <div className={`${props.className} type-writter`} ref={elementRef}>
             <span className="text">{typedText}</span>
             <span className="cursor">{cursor}</span>
         </div>
     )
 }
+
+
 
 export default TypeWriter

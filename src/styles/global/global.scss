@@ -15,7 +15,7 @@ body {
     background-color: $primary-dark;
     color: $primary-light;
     margin: 0;
-    text-shadow: 0 0 5px #0000002c;
+    text-shadow: 0 0 5px #00000050;
 
  }
 
@@ -49,6 +49,19 @@ html {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background-color: lighten($primary-light, 10%);
+}
+
+/* Gradients */
+.super-blue-gradient-text > * {
+    /* Define the gradient */
+    background: linear-gradient(to bottom right, lighten($super-blue, 30%) 0%, $super-blue 30%, $purple 70%, lighten($purple, 10%) 100%);
+
+    /* Clip the background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Make the text transparent to show the background */
+    color: transparent !important;
 }
 
 /* Effects */

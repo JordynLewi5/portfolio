@@ -14,6 +14,7 @@
                 color: $super-blue;
                 font-size: 7rem;
                 margin: 1rem;
+                text-shadow: none !important;
 
                 @media (max-width: 1528px) {
                     font-size: 6rem;
@@ -43,44 +44,6 @@
             .software-engineer {
                 font-size: 2rem;
                 margin: 1rem;
-            }
-        }
-    }
-    
-    .projects-div {
-        display: flex;
-        flex-direction: column;
-        min-height: 80vh;
-        height: auto;
-        clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0 97%);
-        background-color: darken($super-blue, 10%);        
-        background-image: url('/public/images/stars.svg');
-        background-attachment: fixed;
-        padding-left: $margin * 1.5;
-        padding-right: $margin * 1.5;
-        padding-bottom: $margin;
-        padding-top: calc($margin / 2);
-
-        .projects-header {
-            font-size: 5rem;
-            margin-top: calc($margin / 2);
-            margin-bottom: calc($margin / 2);
-            color: $primary-light;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-
-            @media (max-width: 1028px) {
-                font-size: 3rem;
-            }
-
-            @media (max-width: 768px) {
-                font-size: 2rem;
-            }
-
-            @media (max-width: 400px) {
-                font-size: 1.5rem;
             }
         }
     }
