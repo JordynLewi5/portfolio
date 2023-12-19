@@ -9,6 +9,10 @@
     font-family: 'Montserrat';
     src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Inter';
+    src: url('/public/fonts/Inter-VariableFont_slnt,wght.woff') format('woff');
+}
 
 body {
     font-family: 'Roboto', sans-serif;

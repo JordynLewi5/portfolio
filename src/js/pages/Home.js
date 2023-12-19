@@ -8,7 +8,7 @@ function Home() {
         <div className="home">
             <div className="landing-div">
                 <div className="landing-text">
-                    <TypeWriter text="<Jordyn Lewis />" duration={150} scrollYThreshold={0} offset={0} className="name super-blue-gradient-text"/>
+                    <TypeWriter text="<Jordyn Lewis />" duration={100} scrollYThreshold={0} offset={0} className="name super-blue-gradient-text"/>
                 </div>
             </div>
             

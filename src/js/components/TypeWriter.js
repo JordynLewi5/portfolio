@@ -28,15 +28,22 @@ function TypeWriter(props) {
     }
 
     async function asyncTypeWriter() {
-        await sleep(100);
+        // await sleep(100);
         setTypedText('')
         asyncTypeLoop(props.duration).then(() => {
             asyncCursorBlink();
         });
     }
 
-    // Create a scroll listener
+    // Initialize the type writer.
     useEffect(() => {
+        // If the scrollYThreshold is 0, start the type writer.
+        if (props.scrollYThreshold === 0) {
+            setVisibility(true);
+            asyncTypeWriter();
+        }
+
+        // Scroll listener
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
@@ -69,10 +76,7 @@ function TypeWriter(props) {
 
     // If the scrollYThreshold is 0, start the type writer.
     useEffect(() => {
-        if (props.scrollYThreshold === 0) {
-            setVisibility(true);
-            asyncTypeWriter();
-        }
+
     }, []);
 
     return (

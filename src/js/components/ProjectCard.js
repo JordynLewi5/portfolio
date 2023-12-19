@@ -32,8 +32,13 @@ function ProjectCard(props) {
     }, [scrollY]);
 
     return (
-        <a href={props.href} target="__" className={`project-card ${visibility ? 'slide-in' : 'slide-out'}`} ref={elementRef}>
-            {props.children}
+        <a href={props.href} target={props.target} className={`project-card ${visibility ? 'slide-in' : 'slide-out'}`} ref={elementRef}>
+            <div className="image">
+                <img src={props.src} alt={props.alt} />
+            </div>
+            <div className="description">
+                <h2>{props.name}</h2>
+            </div>
         </a>
     );
 }
