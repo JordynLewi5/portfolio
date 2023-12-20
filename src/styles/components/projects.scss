@@ -1,0 +1,118 @@
+.projects-div {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    height: auto;
+    clip-path: polygon(0 80px, 100% 0%, 100% 100%, 0 calc(100% - 80px));
+    background: linear-gradient(to bottom, lighten($super-blue, 10%) 5%, $super-blue 30%, $purple 70%, darken($purple, 5%) 100%);        
+    // background-image: url('/public/images/dots-and-lines.svg');
+    background-attachment: fixed;
+    padding-left: calc($margin * 1.5);
+    padding-right: calc($margin * 1.5);
+    padding-bottom: calc($margin + 80px);
+    padding-top: calc($margin / 3 + 80px);
+    // inset shadow
+
+    .projects-header {
+        font-size: 5rem;
+        margin-top: calc($margin / 2.5);
+        margin-bottom: calc($margin / 1.25);
+        color: $primary-light;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+        @media (max-width: 1028px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .project-card-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    
+        .project-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 400px;
+            max-height: 500px;
+            width: fit-content;
+            color: $primary-light;
+            background: lighten($super-blue, 3%);
+            overflow: hidden;
+            text-shadow: none !important;
+            // background: linear-gradient(to bottom right, $super-blue 10%, $purple 100%);
+            box-shadow: 0 0 10px #00000036;
+            // background-color: lighten($primary-dark, 4%);
+            border-radius: 10px;
+            transition: transform .35s ease, color .5s ease;
+    
+            .image {
+                width: 100%;
+                height: 200px;
+                background-color: $primary-dark;
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                object-fit: cover;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            .description {
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                flex: 1;
+                gap: 10px;
+    
+                h1, h2, h3, h4, h5, h6, p {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 100;
+                    line-height: 1.4em;
+                    text-decoration: none;
+                    margin: 0;
+                }
+
+                .link {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 200;
+                    transition: color .25s ease;
+                }
+
+            }
+    
+            &:hover {
+                // transform: scale(1.01);
+                font-weight: bold !important;
+                .link {
+                    color: darken($super-blue, 40%) !important;
+                }
+            }
+    
+            @media (max-width: 768px) {
+                min-width: 250px;
+            }
+        }
+    }
+}
+
