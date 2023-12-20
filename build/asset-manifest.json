@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e50e153.css",
-    "main.js": "/static/js/main.dbf465f3.js",
+    "main.css": "/static/css/main.2c3688ae.css",
+    "main.js": "/static/js/main.7772fb4d.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
     "static/media/Inter-VariableFont_slnt,wght.woff": "/static/media/Inter-VariableFont_slnt,wght.40882a613b0a3cd6b787.woff",
     "static/media/LeagueSpartan-Bold.otf": "/static/media/LeagueSpartan-Bold.caadcad8af387d419251.otf",
     "index.html": "/index.html",
-    "main.1e50e153.css.map": "/static/css/main.1e50e153.css.map",
-    "main.dbf465f3.js.map": "/static/js/main.dbf465f3.js.map"
+    "main.2c3688ae.css.map": "/static/css/main.2c3688ae.css.map",
+    "main.7772fb4d.js.map": "/static/js/main.7772fb4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e50e153.css",
-    "static/js/main.dbf465f3.js"
+    "static/css/main.2c3688ae.css",
+    "static/js/main.7772fb4d.js"
   ]
 }
