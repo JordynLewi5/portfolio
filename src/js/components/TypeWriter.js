@@ -3,7 +3,7 @@ import sleep from "js/Utils/sleep"
 
 function TypeWriter(props) {
     const [typedText, setTypedText] = useState('')
-    const [cursor, setCursor] = useState('|')
+    const [cursor, setCursor] = useState('')
 
     const elementRef = useRef(null);
     const [visibility, setVisibility] = useState(false);
@@ -19,16 +19,18 @@ function TypeWriter(props) {
     }
 
     async function asyncCursorBlink(duration = 750) {
-        while (true) {
+        while (props.cursor_blink) {
             setCursor('|');
             await sleep(duration);
             setCursor('');
             await sleep(duration);
         }
+        setCursor('');
     }
 
     async function asyncTypeWriter() {
-        // await sleep(100);
+        await sleep(props.delay);
+        setCursor('|');
         setTypedText('')
         asyncTypeLoop(props.duration).then(() => {
             asyncCursorBlink();

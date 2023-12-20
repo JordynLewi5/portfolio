@@ -58,7 +58,27 @@
             // background: linear-gradient(to bottom right, $super-blue 10%, $purple 100%);
             gap: 40px;
             transition: transform .35s ease;
-    
+
+            @media (max-width: 768px) {
+                font-size: .75rem;
+                height: 50px;
+                
+                .image {
+                    width: 50px !important;
+                    height: 50px !important;
+                }
+
+                .skill-section {
+                    .level-bar {
+                        .level-bar-fill {
+                            .level-bar-fill-text {
+                                font-size: .75rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+            
             .image {
                 display: flex;
                 width: 100px;

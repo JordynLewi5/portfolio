@@ -57,6 +57,7 @@
             box-shadow: 0 0 10px #00000036;
             // background-color: lighten($primary-dark, 4%);
             border-radius: 10px;
+            transition: transform .35s ease, color .5s ease;
     
             .image {
                 width: 100%;
@@ -95,14 +96,17 @@
                 .link {
                     font-family: 'Inter', sans-serif;
                     font-weight: 200;
+                    transition: color .25s ease;
                 }
 
             }
     
             &:hover {
-                transform: scale(1.01);
-                transition: transform .35s ease;
+                // transform: scale(1.01);
                 font-weight: bold !important;
+                .link {
+                    color: darken($super-blue, 40%) !important;
+                }
             }
     
             @media (max-width: 768px) {
