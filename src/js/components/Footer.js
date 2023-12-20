@@ -18,6 +18,7 @@ function Footer() {
                 </a>
             </div>
             <div className="footer-text">
+                <p>Designed by me with React</p>
                 <p>© {currentYear} Jordyn Lewis</p>
             </div>
         </div>

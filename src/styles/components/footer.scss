@@ -20,8 +20,15 @@
         img {
             width: 5vw;
             height: auto;
+            transition: filter 0.1s ease-in-out;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
         }
+    }
 
-
+    .footer-text {
+        text-align: center;
     }
 }
