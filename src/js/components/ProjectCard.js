@@ -38,7 +38,11 @@ function ProjectCard(props) {
             </div>
             <div className="description">
                 <h2>{props.name}</h2>
+                <div className="link">
+                    View Project ⮕
+                </div>
             </div>
+
         </a>
     );
 }
