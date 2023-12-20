@@ -23,7 +23,7 @@ function Skills() {
                 {/* Back End */}
                 <h2>Back End</h2>
                 <div className="skill-card-list back-end">
-                    <SkillsCard name="Node.js" level={90} offset={-750} href="" src="/images/nodejs.svg" alt="Node.js" />
+                    <SkillsCard name="Node.js" level={90} offset={-750} href="" src="/images/node.svg" alt="Node.js" />
                     <SkillsCard name="Java" level={80} offset={-750} href="" src="/images/java.svg" alt="Java" />
                     <SkillsCard name="Python" level={80} offset={-750} href="" src="/images/python.svg" alt="Python" />
                     <SkillsCard name="PHP" level={60} offset={-750} href="" src="/images/php.svg" alt="PHP" />
