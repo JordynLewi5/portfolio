@@ -1,0 +1,10 @@
+.project-page__wrapper {
+    padding-left: $margin;
+    padding-right: $margin;
+    background-color: $super-blue;
+    min-height: 100vh;
+
+    .project-page {
+        padding-top: $margin;
+    }
+}

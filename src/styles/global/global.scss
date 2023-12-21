@@ -1,14 +1,17 @@
 @import 'variables';
 @import '../components/components';
 @import '../pages/pages';
+
 @font-face {
     font-family: 'Roboto';
     src: url('/public/fonts/LeagueSpartan-Bold.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Montserrat';
     src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Inter';
     src: url('/public/fonts/Inter-VariableFont_slnt,wght.woff') format('woff');
@@ -16,11 +19,12 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: $primary-dark;
+    background-color: $primary_dark;
     color: $primary-light;
     margin: 0;
     text-shadow: 0 0 5px #00000050;
-
+    overflow-x: hidden;
+    overflow-y: scroll;
  }
 
 a {
@@ -87,4 +91,30 @@ html {
 .slide-out {
     transition: transform .35s ease;
     transform: translateX(-100vw);
+}
+
+// Reusable elements
+.back-button {
+    background-color: $super-blue;
+    color: $primary-light;
+    border: none;
+    font-size: .7rem;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: none !important;
+    transition: transform .05s ease;
+    padding: 6px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow:  4px 4px 7px #00000025,
+             -4px -4px 7px #ffffff18;
+    cursor: pointer;
+    
+    &:hover {
+        color: darken($super-blue, 40%);
+        transform: scale(1.02);
+    }
+    
+    &:active {
+        transform: scale(.95);
+    }
 }

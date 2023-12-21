@@ -39,8 +39,10 @@ function TypeWriter(props) {
 
     // Initialize the type writer.
     useEffect(() => {
+        console.log('useEffect')
         // If the scrollYThreshold is 0, start the type writer.
         if (props.scrollYThreshold === 0) {
+            console.log('scrollYThreshold is 0');
             setVisibility(true);
             asyncTypeWriter();
         }
