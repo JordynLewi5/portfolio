@@ -1,6 +1,4 @@
 @import 'variables';
-@import '../components/components';
-@import '../pages/pages';
 
 @font-face {
     font-family: 'Roboto';
@@ -96,7 +94,7 @@ html {
 // Reusable elements
 .back-button {
     background-color: $super-blue;
-    color: $primary-light;
+    color: $primary-light !important;
     border: none;
     font-size: .7rem;
     font-family: 'Montserrat', sans-serif;
@@ -122,3 +120,6 @@ html {
 button {
     color: $primary-light;
 }
+
+@import '../components/components';
+@import '../pages/pages';
