@@ -94,27 +94,30 @@ html {
 }
 
 // Reusable elements
-.back-button {
-    background-color: $super-blue;
-    color: $primary-light;
-    border: none;
-    font-size: .7rem;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: none !important;
-    transition: transform .05s ease;
-    padding: 6px;
+.back-button-div {
     margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow:  4px 4px 7px #00000025,
-             -4px -4px 7px #ffffff18;
-    cursor: pointer;
-    
-    &:hover {
-        color: darken($super-blue, 40%);
-        transform: scale(1.02);
-    }
-    
-    &:active {
-        transform: scale(.95);
+
+    .back-button {
+        background-color: $super-blue;
+        color: $primary-light;
+        border: none;
+        font-size: .7rem;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: none !important;
+        transition: transform .05s ease;
+        padding: 6px;
+        border-radius: 10px;
+        box-shadow:  4px 4px 7px #00000025,
+                -4px -4px 7px #ffffff18;
+        cursor: pointer;
+        
+        &:hover {
+            color: darken($super-blue, 40%);
+            transform: scale(1.02);
+        }
+        
+        &:active {
+            transform: scale(.95);
+        }
     }
 }
