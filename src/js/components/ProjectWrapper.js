@@ -14,7 +14,7 @@ function ProjectWrapper(props) {
     return (
         <div className="project-page__wrapper">
             <div className="project-page">
-                <button onClick={goBack} className="back-button">Go Back</button>
+                <button className="back-button" onClick={goBack}>Go Back</button>
                 <div className="project-page__header">
                     <TypeWriter text={props.title} cursor_blink={true} delay={0} offset={0} scrollYThreshold={0} duration={35} className="skill-header"/>
                 </div>
