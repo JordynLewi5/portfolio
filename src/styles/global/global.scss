@@ -82,12 +82,10 @@ p {
 
 /* Effects */
 .fade-in {
-    transition: opacity .35s ease;
     opacity: 1;
 }
 
 .fade-out {
-    transition: opacity .35s ease;
     opacity: 0;
 }
 

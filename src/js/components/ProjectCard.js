@@ -35,11 +35,9 @@ function ProjectCard(props) {
     }
   }, [scrollY, elementYOffset]);
 
-  // Add a class for initial fading in when eligible
-  const cardClassName = `${props.className} project-card ${visibility ? 'slide-in' : 'slide-out'}`;
-
+//   ${visibility ? 'slide-in' : 'slide-out'}
   return (
-    <a href={props.href} target={props.target} className={cardClassName} ref={elementRef}>
+    <a href={props.href} target={props.target} className={`${props.className} project-card ${visibility ? 'fade-in' : 'fade-out'}`} ref={elementRef}>
       <div className="image">
         <img src={props.src} alt={props.alt} />
       </div>
