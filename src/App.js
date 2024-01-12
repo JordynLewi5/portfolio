@@ -16,7 +16,7 @@ function App() {
                 <Route path = "/esblights-hue" element={<ESBLightsHue />} />
                 <Route path = "/partie" element={<Partie />} />
                 <Route path = "/rowing-guide" element={<RowingGuide />} />
-                <Route path = "/demo/rowing-guide" element={<RowingGuideDemo />} />
+                <Route path = "/rowing-guide/demo" element={<RowingGuideDemo />} />
                 <Route path = "*" element={<Navigate to = "/" />} />
             </Routes>
             <Footer />
