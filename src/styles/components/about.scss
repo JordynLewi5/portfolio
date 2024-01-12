@@ -1,0 +1,38 @@
+.about-div {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    height: auto;
+    clip-path: polygon(0 80px, 100% 0%, 100% 100%, 0 100%);
+    background: $pastel-gradient;        
+    // background-image: url('/public/images/dots-and-lines.svg');
+    background-attachment: fixed;
+    padding-left: calc($margin * 1.5);
+    padding-right: calc($margin * 1.5);
+    padding-bottom: calc($margin + 80px);
+    padding-top: calc($margin / 2 + 80px);
+    // inset shadow
+
+    .about-header {
+        font-size: 5rem;
+        margin-top: calc($margin / 2.5);
+        margin-bottom: calc($margin / 1.25);
+        color: $primary-light;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+        @media (max-width: 1028px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 1.5rem;
+        }
+    }
+}

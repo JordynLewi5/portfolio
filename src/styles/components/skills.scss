@@ -7,7 +7,7 @@
     padding-left: calc($margin * 1.5);
     padding-right: calc($margin * 1.5);
     padding-bottom: calc($margin + 80px);
-    padding-top: 80px;
+    padding-top: calc($margin / 2);
 
     .skill-header {
         font-size: 5rem;
@@ -116,7 +116,7 @@
                         display: flex;
                         height: 100%;
                         width: 0%;
-                        background: linear-gradient(to right, lighten($super-blue, 10%) 0, $purple 15vw, $maroon 55vw, $red 60vw);
+                        background: linear-gradient(to right, lighten($super-blue, 10%) 0, lighten($purple, 10%) 20vw, $maroon 55vw, $red 60vw);
                         transition: width .6s ease-in-out;
                         border-radius: 0 100px 100px 0;
                         justify-content: left;

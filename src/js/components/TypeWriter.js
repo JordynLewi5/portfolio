@@ -108,7 +108,6 @@ function TypeWriter(props) {
 
     return (
         <div className={`${props.className} type-writer`} ref={elementRef}>
-            <span className="hidden-text opaque-off">{props.text}</span>
             <span className="text">{typedText}</span>
             <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
         </div>
