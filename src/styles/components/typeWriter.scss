@@ -1,11 +1,20 @@
-.type-writter {
-    display: flex;
-    height: 1ch;
+.type-writer {
+    display: inline;
+    min-height: 1ch;
+    line-height: fit-content;
+    
+    .hidden-text {
+        position:fixed;
+        width: inherit;
+        line-height: fit-content;
+    }
 
     .cursor {
         position: relative;
-        width: .5ch;
-        top: .05ch;
-        left: .05ch;
+        width: 1ch;
+        top: -0.02ch;
+        left: .15ch;
+        font-family: 'Inter', sans-serif;
+        font-weight: bold;
     }
 }

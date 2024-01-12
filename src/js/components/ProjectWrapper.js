@@ -12,12 +12,12 @@ function ProjectWrapper(props) {
     const goBack = () => { navigate(-1); };
 
     return (
-        <div className="project-page__wrapper">
-            <div className="project-page">
-                <button onClick={goBack} className="back-button">Go Back</button>
-                <div className="project-page__header">
+        <div className="project-page__wrapper super-blue-gradient">
+            <div className="project-page neumorphic-lg border-radius">
+                <button onClick={goBack} className="back-button neumorphic">Go Back</button>
+                <h1 className="project-page__header">
                     <TypeWriter text={props.title} cursor_blink={true} delay={0} offset={0} scrollYThreshold={0} duration={35} className="skill-header"/>
-                </div>
+                </h1>
                 <div className="project-page__content">
                     {props.children}
                 </div>

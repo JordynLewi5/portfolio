@@ -3,7 +3,7 @@ import sleep from "js/Utils/sleep"
 
 function TypeWriter(props) {
     const [typedText, setTypedText] = useState('')
-    const [cursor, setCursor] = useState('')
+    const [cursor, setCursor] = useState(false)
 
     const elementRef = useRef(null);
     const [visibility, setVisibility] = useState(false);
@@ -11,7 +11,12 @@ function TypeWriter(props) {
     const [elementYOffset, setElementYOffset] = useState(null);
 
     async function asyncTypeLoop(duration) {
-        const items = props.text.split('');
+        let items;
+        if (props.text) {
+            items = props.text.split('');
+        } else {
+            return setTypedText('You need to set a \'text\' value.')
+        }
         for (let item of items) {
             await sleep(duration);
             setTypedText(typedText => typedText + item);
@@ -20,9 +25,9 @@ function TypeWriter(props) {
 
     async function asyncCursorBlink(duration = 750) {
         while (props.cursor_blink) {
-            setCursor('|');
+            setCursor(true);
             await sleep(duration);
-            setCursor('');
+            setCursor(false);
             await sleep(duration);
         }
         setCursor('');
@@ -30,7 +35,7 @@ function TypeWriter(props) {
 
     async function asyncTypeWriter() {
         await sleep(props.delay);
-        setCursor('|');
+        setCursor(true);
         setTypedText('')
         asyncTypeLoop(props.duration).then(() => {
             asyncCursorBlink();
@@ -84,9 +89,10 @@ function TypeWriter(props) {
     }, []);
 
     return (
-        <div className={`${props.className} type-writter`} ref={elementRef}>
+        <div className={`${props.className} type-writer`} ref={elementRef}>
+            <span className="hidden-text opaque-off">{props.text}</span>
             <span className="text">{typedText}</span>
-            <span className="cursor">{cursor}</span>
+            <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
         </div>
     )
 }

@@ -58,6 +58,7 @@
             // background: linear-gradient(to bottom right, $super-blue 10%, $purple 100%);
             gap: 40px;
             transition: transform .5s ease;
+            font-family: 'Inter', sans-serif;
 
             @media (max-width: 768px) {
                 font-size: .75rem;
@@ -116,7 +117,7 @@
                         height: 100%;
                         width: 0%;
                         background: linear-gradient(to right, lighten($super-blue, 10%) 0, $purple 15vw, $maroon 55vw, $red 60vw);
-                        transition: width .5s ease-in-out;
+                        transition: width .6s ease-in-out;
                         border-radius: 0 100px 100px 0;
                         justify-content: left;
                         align-items: center;

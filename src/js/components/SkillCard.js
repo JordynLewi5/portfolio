@@ -34,7 +34,7 @@ function SkillsCard(props) {
             for (let i = 0; i < props.level; i++) {
                 setTimeout(() => {
                     setLevelDisplay(i + 1);
-                }, i * 750 / props.level);
+                }, i * 700 / props.level);
             }
         }
     }, [scrollY]);

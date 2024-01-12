@@ -1,0 +1,49 @@
+.caption-image {  
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+    .overlay {
+        margin: $margin;
+        width: fit-content;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.1s ease-in-out, color 0.1s ease-in-out;
+
+        }
+
+        .caption {
+            color: $primary-light;
+            font-family: 'Inter', sans-serif;
+            font-size: 1vw;
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 8%);
+            transform: translate(-50%, -50%);
+            margin-left: 8%;
+            margin-right: 8%;
+            padding: 5px 10px;
+            border-radius: 100px;
+            background-color: #4136449c;
+            color: $primary-light;
+            box-shadow: 0 0 5px #0005;
+        }
+
+        &:hover {
+            .image {
+                filter: brightness(90%);
+            }
+            
+            .caption {
+                background-color: #6f52aecf;
+            }
+        }
+    }
+}

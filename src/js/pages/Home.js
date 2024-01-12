@@ -12,12 +12,8 @@ function Home() {
                     <TypeWriter text="Portfolio" cursor_blink={true} delay={2000} duration={100} scrollYThreshold={0} offset={0} className="title super-blue-gradient-text"/>
                 </div>
             </div>
-            
             <Projects />
-
             <Skills />
-
-            <Footer />
         </div>
     );
 }
