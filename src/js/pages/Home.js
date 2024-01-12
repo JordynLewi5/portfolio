@@ -1,5 +1,4 @@
 import TypeWriter from 'js/components/TypeWriter';
-import Footer from 'js/components/Footer';
 import Projects from 'js/pages/Projects';
 import Skills from 'js/pages/Skills';
 import About from './About';

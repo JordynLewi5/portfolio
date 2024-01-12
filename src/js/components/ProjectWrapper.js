@@ -1,11 +1,5 @@
 import TypeWriter from "js/components/TypeWriter"
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Link,
-    useNavigate,
-  } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ProjectWrapper(props) {
     const navigate = useNavigate();
