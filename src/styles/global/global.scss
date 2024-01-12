@@ -64,9 +64,9 @@ p {
 }
 
 /* Gradients */
-.super-blue-gradient-text > * {
+.super-blue-gradient-text > * > * {
     /* Define the gradient */
-    background: linear-gradient(to bottom right, lighten($super-blue, 30%) 0%, $purple 50%, $maroon 100%);
+    background: $pastel-gradient;
 
     /* Clip the background to the text */
     -webkit-background-clip: text;
@@ -77,7 +77,7 @@ p {
 }
 
 .super-blue-gradient {
-    background: linear-gradient(to bottom right, lighten($super-blue, 30%) 0%, $purple 40%, $maroon 130%);
+    background: $pastel-gradient;
 }
 
 /* Effects */

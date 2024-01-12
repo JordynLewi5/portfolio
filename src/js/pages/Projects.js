@@ -5,7 +5,7 @@ function Projects() {
     return (
         <div className="projects-div">
             {/* PROJECTS HEADER */}
-            <TypeWriter text="<Projects />" cursor_blink={true} delay={0} offset={-900} duration={50} className="projects-header"/>
+            <TypeWriter text="<Projects 🚀 />" cursor_blink={true} delay={0} offset={-900} duration={50} className="projects-header"/>
             
             <div className="project-card-list">
                 <ProjectCard name="Empire State Building Lights" offset={-850} href="/esblights" target="" src="/images/esblights-thumbnail.png" alt="Empire State Building Lights" />

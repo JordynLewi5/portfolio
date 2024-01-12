@@ -6,6 +6,11 @@
     min-height: 100vh;
     height: fit-content;
     
+    @media (max-width: 768px) {
+        padding-left: $margin;
+        padding-right: $margin;
+    }
+
     .project-page {
         // margin-top: $margin;
 
@@ -62,7 +67,7 @@
                 padding: 15px;
                 border-radius: 10px;
                 box-shadow:  0 0 9px #00000025;
-                
+
                 p {
                     margin: 0;
                 }

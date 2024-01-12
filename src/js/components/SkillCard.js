@@ -56,12 +56,12 @@ function SkillsCard(props) {
                 </div>
                 <div className="mastery-level">
                     Mastery: {
-                        levelDisplay === 100 ? 'Master' :
-                        levelDisplay >= 90 ? 'Expert' : 
-                        levelDisplay >= 80 ? 'Advanced' : 
-                        levelDisplay >= 65 ? 'Intermediate' : 
-                        levelDisplay >= 40 ? 'Beginner' : 
-                        levelDisplay > 0 ? 'Novice' :  
+                        levelDisplay === 100 ? 'Master 🔥' :
+                        levelDisplay >= 90 ? 'Expert ⭐️' : 
+                        levelDisplay >= 80 ? 'Advanced ✨' : 
+                        levelDisplay >= 65 ? 'Intermediate 💪' : 
+                        levelDisplay >= 40 ? 'Competent 🤷‍♂️' : 
+                        levelDisplay > 0 ? 'Novice 🙈' :  
                         levelDisplay === 0 ? 'N/A' : null
                     } 
                 </div>

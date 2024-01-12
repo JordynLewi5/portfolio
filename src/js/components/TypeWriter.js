@@ -1,7 +1,8 @@
 import { useRef, useEffect, useState } from "react"
 import sleep from "js/Utils/sleep"
+import emojiRegex from "emoji-regex"
 
-function TypeWriter(props) {
+function TypeWriter(props) { 
     const [typedText, setTypedText] = useState('')
     const [cursor, setCursor] = useState(false)
 
@@ -10,18 +11,37 @@ function TypeWriter(props) {
     const [scrollY, setScrollY] = useState(0);
     const [elementYOffset, setElementYOffset] = useState(null);
 
+
     async function asyncTypeLoop(duration) {
-        let items;
         if (props.text) {
-            items = props.text.split('');
+            const emojiMatcher = emojiRegex();
+            let emoji = false;
+
+            for (let i = 0; i < props.text.length; i++) {
+                await sleep(duration);
+                if (emojiMatcher.test(props.text[i] + props.text[i + 1])) {
+                    // If the item is an emoji, type it all at once
+                    setTypedText(typedText => typedText + props.text[i] + props.text[i + 1]);
+                    emoji = true;
+                } else {
+                    if (emoji) {
+                        emoji = false;
+                        continue;
+                    }
+                    // If the item is not an emoji, type it character by character
+                    const characters = props.text[i].split('');
+                    for (const char of characters) {
+                        await sleep(duration);
+                        setTypedText(typedText => typedText + char);
+                    }
+                }
+            }
         } else {
-            return setTypedText('You need to set a \'text\' value.')
-        }
-        for (let item of items) {
-            await sleep(duration);
-            setTypedText(typedText => typedText + item);
+            return setTypedText('You need to set a \'text\' value.');
         }
     }
+    
+    
 
     async function asyncCursorBlink(duration = 750) {
         while (props.cursor_blink) {
@@ -44,10 +64,8 @@ function TypeWriter(props) {
 
     // Initialize the type writer.
     useEffect(() => {
-        console.log('useEffect')
         // If the scrollYThreshold is 0, start the type writer.
         if (props.scrollYThreshold === 0) {
-            console.log('scrollYThreshold is 0');
             setVisibility(true);
             asyncTypeWriter();
         }

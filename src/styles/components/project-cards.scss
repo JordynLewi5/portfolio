@@ -4,7 +4,7 @@
     min-height: 80vh;
     height: auto;
     clip-path: polygon(0 80px, 100% 0%, 100% 100%, 0 calc(100% - 80px));
-    background: linear-gradient(to bottom, lighten($super-blue, 10%) 5%, $super-blue 30%, $purple 70%, darken($purple, 5%) 100%);        
+    background: $pastel-gradient;        
     // background-image: url('/public/images/dots-and-lines.svg');
     background-attachment: fixed;
     padding-left: calc($margin * 1.5);
@@ -50,10 +50,10 @@
             min-width: 400px;
             width: fit-content;
             color: $primary-light;
-            background: #0000;
+            background: #ffffff13;
             overflow: hidden;
             text-shadow: none !important;
-            box-shadow: 0 0 10px #00000027;
+            box-shadow: 0 0 10px #00000042;
             border-radius: 10px;
             transition: transform .5s ease, color .5s ease, opacity .35s ease;
     
@@ -65,6 +65,8 @@
                 background-position: center;
                 overflow: hidden;
                 object-fit: cover;
+                // Make top of image visible
+                object-position: 0 0;
     
                 img {
                     width: 100%;
@@ -94,7 +96,7 @@
                 .link {
                     font-family: 'Inter', sans-serif;
                     font-weight: 200;
-                    transition: color .25s ease;
+                    transition: color .15s ease;
                 }
 
             }
@@ -104,7 +106,7 @@
                 font-weight: bold !important;
                 
                 .link {
-                    color: darken($super-blue, 40%) !important;
+                    color: $primary-dark !important;
                 }
             }
     
