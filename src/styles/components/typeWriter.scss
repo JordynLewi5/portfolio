@@ -1,12 +1,12 @@
 .type-writer {
     display: inline;
     min-height: 1.5ch;
-    line-height: 2.5ch;
+    line-height: 1em;
     
     .text-container {
         display: flex;
         flex-direction: column;
-        
+
         .hidden-text {
             position:fixed;
             width: 80vw;
@@ -19,6 +19,7 @@
             top: -0.02ch;
             left: .15ch;
             font-family: 'Inter', sans-serif;
+            opacity: 0;
         }
     }
 }

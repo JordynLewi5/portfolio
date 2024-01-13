@@ -113,19 +113,19 @@ p {
 .neumorphic {
     background: linear-gradient(145deg, #0001, #fff1);
     box-shadow:  5px 5px 8px rgba(0, 0, 0, 0.134),
-                -5px -5px 8px rgba(255, 255, 255, 0.1);
+                -5px -5px 8px rgba(255, 255, 255, 0.13);
 }
 
 .neumorphic-md {
     background: linear-gradient(145deg, #0001, #fff1);
     box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.134),
-                -10px -10px 20px rgba(255, 255, 255, 0.1);
+                -10px -10px 20px rgba(255, 255, 255, 0.13);
 }
 
 .neumorphic-lg {
     background: linear-gradient(145deg, #0001, #fff1);
     box-shadow:  17px 17px 34px rgba(0, 0, 0, 0.134),
-                -17px -17px 34px rgba(255, 255, 255, 0.1);
+                -17px -17px 34px rgba(255, 255, 255, 0.13);
 }
 
 .border-radius {

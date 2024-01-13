@@ -49,9 +49,17 @@
         font-size: 1.5rem;
         font-family: 'Inter', sans-serif;
         width: auto;
-        text-shadow: 0 0 5px #000000c2;
+        text-shadow: 0 0 3px #000000c2;
         padding: 60px;
         
+        .about-name {
+            line-height: 1.5em;
+
+            .about-description {
+                font-size: 1.25rem;
+            }
+        }
+
         .about-images {
             margin: 20px;
             display: flex;
