@@ -112,7 +112,6 @@ function TypeWriter(props) {
             <div className={`${props.className} type-writer`} ref={elementRef}>
                 <div className="type-container">
                     <div className="first-text">
-                        <span className="hidden">{props.text}</span>
                         <span className="text">{typedText}</span>
                         <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
                     </div>
@@ -138,7 +137,6 @@ function TypeWriter(props) {
     } else {
         return (
             <div className={`${props.className} type-writer`} ref={elementRef}>
-                <span className="hidden">{props.text}</span>
                 <span className="text">{typedText}</span>
                 <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
             </div>
