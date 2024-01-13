@@ -34,6 +34,10 @@
             background-color: #4136449c;
             color: $primary-light;
             box-shadow: 0 0 5px #0005;
+
+            @media (max-width: 1000px) {
+                font-size: 1.3vw;
+            }
         }
 
         &:hover {

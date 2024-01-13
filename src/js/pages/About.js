@@ -24,18 +24,10 @@ function About() {
                     />
                 </TypeWriter>
                 <div className="about-images">
-                    <div className="image" id="rowing">
-                        🚣‍♂️
-                    </div>
-                    <div className="image" id="biking">
-                        🚴‍♂️
-                    </div>
-                    <div className="image" id="dog">
-                        🐶
-                    </div>
-                    <div className="image" id="chess">
-                        ♟️
-                    </div>
+                    <img src="/images/rowing.svg" alt="rower" className="image" id="rowing" />
+                    <img src="/images/biking.svg" alt="biker" className="image" id="biking" />
+                    <img src="/images/dog.svg" alt="dog" className="image" id="dog" />
+                    <img src="/images/chess.svg" alt="chess" className="image" id="chess" />
                 </div>
             </div>
         </div>

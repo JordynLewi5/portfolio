@@ -61,41 +61,31 @@
         }
 
         .about-images {
-            margin: 20px;
+            margin: 30px;
+            margin-top: 60px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
             .image {
-                width: fit-content;
+                width: 100px;
                 height: auto;
                 text-align: center;
-                font-size: 7rem;
                 transition: transform .5s ease, filter .5s ease;
                 user-select: none;
 
-                @media (max-width: 1428px) {
-                    font-size: 6rem;
-                }
-
                 @media (max-width: 1028px) {
-                    font-size: 5rem;
+                    width: 60px;
                 }
-
-                @media (max-width: 768px) {
-                    font-size: 4rem;
-                }
-
+                
                 @media (max-width: 600px) {
-                    font-size: 3rem;
-                }
-
-                @media (max-width: 500px) {
-                    font-size: 2.5rem;
+                    width: 50px;
+                    margin-top: 30px;
                 }
 
                 @media (max-width: 400px) {
-                    font-size: 2rem;
+                    width: 40px;
+                    margin-top: 40px;
                 }
 
                 &:hover {
