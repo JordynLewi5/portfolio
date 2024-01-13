@@ -105,11 +105,15 @@ p {
 .opaque-on {
     opacity: 1;
     visibility: visible;
+    display: none;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
 
 .opaque-off {
-   opacity: 0;
+    opacity: 0;
     visibility: hidden;
+    display: none;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
 
 .neumorphic {
