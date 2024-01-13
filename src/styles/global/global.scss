@@ -73,7 +73,7 @@ p {
     background-clip: text;
 
     /* Make the text transparent to show the background */
-    color: transparent !important;
+    color: transparent;
 }
 
 .super-blue-gradient {
@@ -104,10 +104,12 @@ p {
 
 .opaque-on {
     opacity: 1;
+    visibility: visible;
 }
 
 .opaque-off {
    opacity: 0;
+    visibility: hidden;
 }
 
 .neumorphic {
