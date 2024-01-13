@@ -6,12 +6,21 @@
     background: $pastel-gradient;        
     // background-image: url('/public/images/dots-and-lines.svg');
     background-attachment: fixed;
-    padding-left: calc($margin * 2);
-    padding-right: calc($margin * 2);
+    padding-left: calc($margin * 3);
+    padding-right: calc($margin * 3);
     padding-bottom: calc($margin / 2 + 80px);
     padding-top: calc($margin / 2 + 80px);
 
-    // inset shadow
+    @media (max-width: 1028px) {
+        padding-left: calc($margin * 1.5);
+        padding-right: calc($margin * 1.5);
+    }
+
+    @media (max-width: 400px) {
+        padding-left: calc($margin * 1);
+        padding-right: calc($margin * 1);
+        
+    }
 
     .about-header {
         font-size: 5rem;
@@ -39,12 +48,12 @@
     .about-text {
         font-size: 1.5rem;
         font-family: 'Inter', sans-serif;
-        width: 100%;
-
+        width: auto;
+        text-shadow: 0 0 5px #000000c2;
+        padding: 60px;
         
         .about-images {
-            margin: 40px  0;
-            position: relative;
+            margin: 20px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -53,30 +62,42 @@
                 width: fit-content;
                 height: auto;
                 text-align: center;
-                font-size: 9rem;
+                font-size: 7rem;
                 transition: transform .5s ease, filter .5s ease;
                 user-select: none;
 
                 @media (max-width: 1428px) {
-                    font-size: 7rem;
-                }
-
-                @media (max-width: 1028px) {
                     font-size: 6rem;
                 }
 
-                @media (max-width: 768px) {
+                @media (max-width: 1028px) {
                     font-size: 5rem;
                 }
 
-                @media (max-width: 400px) {
+                @media (max-width: 768px) {
                     font-size: 4rem;
+                }
+
+                @media (max-width: 600px) {
+                    font-size: 3rem;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 2.5rem;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 2rem;
                 }
 
                 &:hover {
                     transform: scale(1.1);
                     filter: brightness(1.1);
                 }
+            }
+
+            @media (max-width: 768px) {
+                margin: 0;
             }
         }
     }

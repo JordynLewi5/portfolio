@@ -45,16 +45,16 @@
             }
 
             .title {
-                font-size: 2rem;
+                font-size: 3rem;
                 height: 100px;
                 color: $super-blue;
 
                 @media (max-width: 600px) {
-                    font-size: 1rem;
+                    font-size: 2rem;
                 }
 
                 @media (max-width: 400px) {
-                    font-size: .75rem;
+                    font-size: 1.5rem;
                 }
             }
 

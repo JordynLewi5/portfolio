@@ -3,17 +3,22 @@
     min-height: 1.5ch;
     line-height: 2.5ch;
     
-    .hidden-text {
-        position:fixed;
-        width: 80vw;
-        line-height: fit-content;
-    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        
+        .hidden-text {
+            position:fixed;
+            width: 80vw;
+            line-height: fit-content;
+        }
 
-    .cursor {
-        position: relative;
-        width: 1ch;
-        top: -0.02ch;
-        left: .15ch;
-        font-family: 'Inter', sans-serif;
+        .cursor {
+            position: relative;
+            width: 1ch;
+            top: -0.02ch;
+            left: .15ch;
+            font-family: 'Inter', sans-serif;
+        }
     }
 }

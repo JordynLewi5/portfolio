@@ -64,7 +64,7 @@ p {
 }
 
 /* Gradients */
-.super-blue-gradient-text > * > * {
+.super-blue-gradient-text * {
     /* Define the gradient */
     background: $pastel-gradient;
 
@@ -130,7 +130,7 @@ p {
 
 .border-radius {
     border-radius: 15px;
-    padding: 40px;
+    padding: 50px;
 }
 
 .image-link {
