@@ -105,8 +105,7 @@ p {
 .opaque-on {
     opacity: 1;
     visibility: visible;
-    display: none;
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    display: inline;
 }
 
 .opaque-off {
