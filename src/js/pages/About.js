@@ -19,7 +19,7 @@ function About() {
                         cursor_blink={false} 
                         delay={0} 
                         offset={-900} 
-                        duration={5} 
+                        duration={2} 
                         className="about-description"
                     />
                 </TypeWriter>
