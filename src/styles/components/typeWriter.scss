@@ -1,11 +1,11 @@
 .type-writer {
     display: inline;
-    height: 1.2ch;
-    line-height: 1.2ch;
+    min-height: 1.5ch;
+    line-height: 2.5ch;
     
     .hidden-text {
         position:fixed;
-        width: inherit;
+        width: 80vw;
         line-height: fit-content;
     }
 

@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, Children } from "react"
 import sleep from "js/Utils/sleep"
 import emojiRegex from "emoji-regex"
 
@@ -106,12 +106,45 @@ function TypeWriter(props) {
 
     }, []);
 
-    return (
-        <div className={`${props.className} type-writer`} ref={elementRef}>
-            <span className="text">{typedText}</span>
-            <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
-        </div>
-    )
+    if (props.children) {
+        // Handle sequential typing
+        return (
+            <div className={`${props.className} type-writer`} ref={elementRef}>
+                <span className="hidden">{props.text}</span>
+                <span className="text">{typedText}</span>
+                <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
+                <br />
+                {/* {props.children} */}
+                {Children.map(props.children, (child, index) => {
+                    return (
+                        <div>
+                            <br />
+                            <TypeWriter 
+                                text={child.props.text} 
+                                cursor_blink={child.props.cursor_blink} 
+                                delay={props.delay + child.props.delay + 3 * props.text.length * props.duration}
+                                duration={child.props.duration}
+                                scrollYThreshold={child.props.scrollYThreshold}
+                                offset={child.props.offset}
+                                className={child.props.className}
+                            />
+                        </div>
+
+                        // <TypeWriter text="Jordyn Lewis" cursor_blink={false} delay={0} duration={30} scrollYThreshold={0} offset={0} className="name"/>
+
+                    )
+                })}
+            </div>
+        )
+    } else {
+        return (
+            <div className={`${props.className} type-writer`} ref={elementRef}>
+                <span className="hidden">{props.text}</span>
+                <span className="text">{typedText}</span>
+                <span className={`cursor ${cursor ? 'opaque-on' : 'opaque-off'}`}>|</span>
+            </div>
+        )
+    }
 }
 
 

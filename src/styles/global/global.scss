@@ -129,7 +129,8 @@ p {
 }
 
 .border-radius {
-    border-radius: 10px;
+    border-radius: 15px;
+    padding: 40px;
 }
 
 .image-link {
@@ -150,4 +151,11 @@ p {
 
         transition: transform 0.2s ease;
     }
+}
+
+.hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
 }
