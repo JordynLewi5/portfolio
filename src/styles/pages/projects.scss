@@ -21,8 +21,20 @@
         // }
         width: fit-content;
         background-color: #0000;
-        padding: 70px;
+        padding: 90px;
         // border: 1px solid $primary-light;
+
+        @media (max-wdith: 1500px) {
+            padding: 70px
+        }
+
+        @media (max-width: 1000px) {
+            padding: 60px;
+        }
+
+        @media (max-width: 500px) {
+            padding: 35px;
+        }
 
         .back-button {
             font-family: 'Inter', sans-serif;

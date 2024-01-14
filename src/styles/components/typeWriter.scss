@@ -12,17 +12,13 @@
             width: 80vw;
             line-height: fit-content;
         }
+    }
 
-        .cursor {
-            -webkit-background-clip: none !important;
-            background-clip: none !important;
-            color: inherit;
-            position: relative;
-            width: 1ch;
-            top: -0.02ch;
-            left: .15ch;
-            font-family: 'Inter', sans-serif;
-            opacity: 0;
-        }
+    .cursor {
+        position: relative;
+        width: 1ch;
+        top: -0.02ch;
+        left: .15ch;
+        font-family: 'Inter', sans-serif;
     }
 }

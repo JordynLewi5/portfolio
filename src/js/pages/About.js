@@ -8,7 +8,7 @@ function About() {
                 <TypeWriter 
                     text="Hi, I'm Jordyn!"
                     cursor_blink={false} 
-                    delay={500} 
+                    delay={100} 
                     offset={-900} 
                     duration={20} 
                     className="about-name"
@@ -19,7 +19,7 @@ function About() {
                         cursor_blink={false} 
                         delay={0} 
                         offset={-900} 
-                        duration={2} 
+                        duration={4} 
                         className="about-description"
                     />
                 </TypeWriter>

@@ -10,7 +10,7 @@
             align-items: center;
             height: 100%;
             gap: 20px;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             
             .name {
                 color: $super-blue;
@@ -18,7 +18,9 @@
                 margin: 1rem;
                 text-shadow: none !important;
                 height: fit-content;
-                font-weight: bold;
+                // font-weight: 400;
+                letter-spacing: 1vw;
+                // overflow: visible;
 
                 @media (max-width: 1528px) {
                     font-size: 6rem;
@@ -46,6 +48,10 @@
                 font-size: 5rem;
                 height: 100px;
                 color: $super-blue;
+                // font-weight: 400;
+                letter-spacing: 4vw;
+                left: 3vw;
+                position: relative;
                 
                 @media (max-width: 1200px) {
                     font-size: 4rem;
@@ -61,6 +67,12 @@
 
                 @media (max-width: 600px) {
                     font-size: 1rem;
+                }
+
+
+                .cursor {
+                    position: relative;
+                    left: -3.5vw;
                 }
             }
 

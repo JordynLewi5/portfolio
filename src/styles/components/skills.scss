@@ -74,6 +74,8 @@
                         .level-bar-fill {
                             .level-bar-fill-text {
                                 font-size: .75rem !important;
+                                padding-left: 15px;
+                                padding-right: 0;
                             }
                         }
                     }
@@ -137,7 +139,7 @@
                 .mastery-level {
                     font-size: 1rem;
                     height: 0px;
-                    color: lighten($super-blue, 10%);
+                    color: lighten($super-blue, 20%);
                 }
             }
             
