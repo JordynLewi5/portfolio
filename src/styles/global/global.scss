@@ -43,18 +43,18 @@ p {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    position: fixed;
+    position: absolute;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $pastel-gradient;
+    background: linear-gradient(to bottom, lighten($super-blue, 30%) 0%, lighten($purple, 25%) 40%, lighten($red, 15%) 130%);
     border: 1px solid transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: $dark-gray;
+    background-color: white;
     border-radius: 10px;
 }
 
