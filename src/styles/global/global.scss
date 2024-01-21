@@ -48,19 +48,19 @@ p {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background-color: $primary-light;
+    background-color: transparent;
     border: 1px solid transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: $primary-light;
+    background-color: $dark-gray;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: lighten($primary-light, 10%);
+    background-color: darken($dark-gray, 10%);
 }
 
 /* Gradients */
