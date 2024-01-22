@@ -3,7 +3,7 @@ import SkillsCard from "../components/SkillCard";
 
 function Skills() {
     return (
-        <div className="skill-div">
+        <div className="skill-div" id="skills-div">
             <TypeWriter text="<Skills 🛠️ />" cursor_blink={true} delay={200} offset={-750} duration={30} className="skill-header"/>
             <div className="skill-levels"></div>
             {/* Front End */}

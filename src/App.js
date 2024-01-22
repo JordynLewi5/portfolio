@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import Nav from 'js/components/Nav';
 import Footer from 'js/components/Footer';
 import Home from 'js/pages/Home';
 import ScrollToLink from 'js/Utils/ScrollToLink';
@@ -13,6 +14,7 @@ import RowingGuideDemo from 'js/pages/demo/RowingGuideDemo'
 function App() {
     return (
         <div className="app">
+            <Nav />
             <Routes>
                 <Route path = "/" element={<Home />} />
                 <Route path = "/esblights" element={<ESBLights />} />

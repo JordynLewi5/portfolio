@@ -3,7 +3,7 @@ import TypeWriter from "../components/TypeWriter"
 
 function Projects() {
     return (
-        <div className="projects-div">
+        <div className="projects-div" id="projects-div">
             {/* PROJECTS HEADER */}
             <TypeWriter text="<Projects 🚀 />" cursor_blink={true} delay={200} offset={-900} duration={30} className="projects-header"/>
             

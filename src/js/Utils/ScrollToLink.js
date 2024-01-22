@@ -7,14 +7,19 @@ function ScrollToLink() {
 
       const offset = 50;
 
-      const targetId = e.target.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+      // Find the closest anchor element with an href attribute
+      const targetAnchor = e.target.closest('a[href^="#"]');
 
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - offset,
-          behavior: 'smooth',
-        });
+      if (targetAnchor) {
+        const targetId = targetAnchor.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth',
+          });
+        }
       }
     };
 
