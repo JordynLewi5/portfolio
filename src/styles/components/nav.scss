@@ -83,6 +83,7 @@
                     color: #0000;
                     transition: text-shadow .5s ease, color 1s ease;
                     text-align: left;
+                    border-radius: 100%;
                 }
 
                 .nav-menu-list-item-selector {
@@ -138,7 +139,7 @@
                         // background-color: #fff3;
 
                         .nav-menu-list-item-text {
-                            text-shadow: 0 0 30px 30px #ffffff;
+                            box-shadow: 0 0 300px #ffffff;
                         }
 
                         .nav-menu-list-item-selector {
