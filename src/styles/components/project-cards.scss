@@ -65,8 +65,10 @@
                 background-position: center;
                 overflow: hidden;
                 object-fit: cover;
+                border-radius: 10px;
                 // Make top of image visible
                 object-position: 0 0;
+                align-items: center;
     
                 img {
                     width: 100%;
