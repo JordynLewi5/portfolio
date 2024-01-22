@@ -102,7 +102,7 @@
         
         .nav-hamburger {
             opacity: 1;
-            box-shadow: $primary-light 0px 0px 1000px;
+            box-shadow: $primary-light 0px 0px 100px 100px;
             background-color: #0005;
         }
 
@@ -135,10 +135,10 @@
                     }
 
                     &:hover {
-                        background-color: #fff3;
+                        // background-color: #fff3;
 
                         .nav-menu-list-item-text {
-                            text-shadow: 0 0 30px #ffffff;
+                            text-shadow: 0 0 30px 30px #ffffff;
                         }
 
                         .nav-menu-list-item-selector {
