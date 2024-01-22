@@ -6,7 +6,7 @@ import About from './About';
 function Home() {
     return (
         <div className="home">
-            <div className="landing-div" id="landing-div">
+            <div className="landing-section" id="landing-section">
                 <div className="landing-text super-blue-gradient-text">
                     <TypeWriter text="Jordyn Lewis" cursor_blink={false} delay={0} duration={40} scrollYThreshold={0} offset={0} className="name" />
                     <TypeWriter text="Portfolio" cursor_blink={true} delay={1400} duration={40} scrollYThreshold={0} offset={0} className="title"/>

@@ -34,19 +34,19 @@ function Nav() {
             <div className="nav-connection-line"></div>
             <nav className="nav-menu">
                 <ul className="nav-menu-list">
-                    <a href="#landing-div" className="nav-menu-list-item">
+                    <a href="#landing-section" className="nav-menu-list-item">
                         <div class="nav-menu-list-item-text">Home</div>
                         <div className="nav-menu-list-item-selector">{selector_icon}</div>
                     </a>
-                    <a href="#projects-div" className="nav-menu-list-item">
+                    <a href="#projects-section" className="nav-menu-list-item">
                         <div class="nav-menu-list-item-text">Projects</div>
                         <div className="nav-menu-list-item-selector">{selector_icon}</div>
                     </a>
-                    <a href="#skills-div" className="nav-menu-list-item">
+                    <a href="#skills-section" className="nav-menu-list-item">
                         <div class="nav-menu-list-item-text">Skills</div>
                         <div className="nav-menu-list-item-selector">{selector_icon}</div>
                     </a>
-                    <a href="#about-div" className="nav-menu-list-item">
+                    <a href="#about-section" className="nav-menu-list-item">
                         <div class="nav-menu-list-item-text">About Me</div>
                         <div className="nav-menu-list-item-selector">{selector_icon}</div>
                     </a>

@@ -39,7 +39,7 @@ function SkillsCard(props) {
         }
     }, [scrollY]);
 
-    return (
+    return ( 
         <div 
             ref={elementRef}
             className={`skill-card`}
@@ -48,7 +48,7 @@ function SkillsCard(props) {
             <a href={props.href} target="__">
                 <img src={props.src} alt={props.alt} className="image"/>
             </a>
-            <div className="skill-section">
+            <div className="skill-div">
                 <div className="level-bar">
                     <div className="level-bar-fill" style={{width: level + '%'}}>
                         <div className="level-bar-fill-text">{levelDisplay + '%'}</div>
