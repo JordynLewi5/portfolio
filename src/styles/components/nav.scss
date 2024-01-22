@@ -49,7 +49,7 @@
         max-height: 0;
         max-width: 50px;
         width: calc(100vw - (2 * 3vw) - 10px); // Account for scrollbar width
-        height: auto;
+        // height: 352px;
         overflow: hidden;
         position: relative;
         border: 1px solid #0000;
@@ -72,7 +72,7 @@
             padding: 0;
             margin: 0;
             width: 100%;
-            height: 0;
+            // height: 100%;
 
             .nav-menu-list-item {
                 display: flex;
@@ -86,7 +86,7 @@
                     border .5s ease, 
                     background-color .5s ease,
                     box-shadow 5s ease;
-
+                height: auto;
                 overflow: hidden;
 
                 .nav-menu-list-item-text {
