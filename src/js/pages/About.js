@@ -2,7 +2,7 @@ import TypeWriter from "js/components/TypeWriter";
 
 function About() {
     return (
-        <div className="about-div">
+        <div className="about-div" id="about-div">
             <TypeWriter text="<About Me 👋 />" cursor_blink={true} delay={200} offset={-900} duration={20} className="about-header"/>
             <div className="about-text neumorphic-md border-radius">
                 <TypeWriter 

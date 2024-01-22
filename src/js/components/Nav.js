@@ -40,6 +40,10 @@ function Nav() {
                         <div class="nav-menu-list-item-text">Skills</div>
                         <div className="nav-menu-list-item-selector">{selector_icon}</div>
                     </a>
+                    <a href="#about-div" className="nav-menu-list-item">
+                        <div class="nav-menu-list-item-text">About Me</div>
+                        <div className="nav-menu-list-item-selector">{selector_icon}</div>
+                    </a>
                 </ul>
             </nav>
         </div>

@@ -1,7 +1,7 @@
 .nav {
     position: fixed;
     top: 50px;
-    left: 30px;
+    left: 5vw;
     z-index: 1000;
 
     .nav-hamburger {
@@ -47,7 +47,7 @@
         overflow: hidden;
         position: relative;
         border: 1px solid #0000;
-        border-radius: 10px;
+        border-radius: 15px;
         box-shadow: none;
         background-color: #0000;
         transition: max-height .5s ease,
@@ -61,11 +61,11 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            width: 200px;
+            width: 90vw;
 
-            @media (max-width: 500px) {
-                width: calc(85vw - 30px);
-            }
+            // @media (max-width: 500px) {
+            //     width: 80vw;
+            // }
 
             .nav-menu-list-item {
                 display: flex;
@@ -116,7 +116,7 @@
             flex-direction: column;
             justify-content: space-around;
             align-items: flex-end;
-            max-height: 300px;
+            max-height: 390px;
             border: 1px solid $primary-light;
             background-color: #0005;
 
@@ -135,6 +135,8 @@
                     }
 
                     &:hover {
+                        background-color: #fff3;
+
                         .nav-menu-list-item-text {
                             text-shadow: 0 0 30px #ffffff;
                         }

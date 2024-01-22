@@ -55,13 +55,13 @@ p {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: $dark-gray;
+    background-color: $primary-light;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($dark-gray, 10%);
+    background-color: darken($primary-light, 10%);
 }
 
 /* Gradients */

@@ -5,7 +5,7 @@ function ScrollToLink() {
     const handleAnchorClick = (e) => {
       e.preventDefault();
 
-      const offset = 50;
+      const offset = 0;
 
       // Find the closest anchor element with an href attribute
       const targetAnchor = e.target.closest('a[href^="#"]');
@@ -16,7 +16,7 @@ function ScrollToLink() {
 
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - offset,
+            top: targetElement.offsetTop + offset,
             behavior: 'smooth',
           });
         }
