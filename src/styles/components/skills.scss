@@ -1,4 +1,4 @@
-.skill-div {
+.skill {
     display: flex;
     flex-direction: column;
     min-height: 80vh;
@@ -67,7 +67,7 @@
                 .image {
                     width: 50px !important;
                     height: 50px !important;
-                } 
+                }
 
                 .skill-section {
                     .level-bar {

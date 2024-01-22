@@ -1,7 +1,7 @@
 .nav {
     position: fixed;
     top: 50px;
-    left: 5vw;
+    left: 3vw;
     z-index: 1000;
 
     .nav-hamburger {
@@ -41,13 +41,11 @@
         padding: 0;
         border-left: 1px solid $primary-light;
         border-right: 1px solid $primary-light;
-        transition: padding .5s ease, 
-            box-shadow .5s ease, 
+        transition: padding .5s cubic-bezier(1, 1, 0, 0),
             background-color .5s ease;
     }
 
     .nav-menu {
-        // display: none; // Hide by default
         max-height: 0;
         width: fit-content;
         overflow: hidden;
@@ -67,11 +65,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            width: 90vw;
-
-            // @media (max-width: 500px) {
-            //     width: 80vw;
-            // }
+            width: calc(100vw - (2 * 3vw) - 10px); // Account for scrollbar width
 
             .nav-menu-list-item {
                 display: flex;
