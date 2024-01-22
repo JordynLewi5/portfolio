@@ -48,7 +48,7 @@
     .nav-menu {
         max-height: 0;
         max-width: 50px;
-        width: fit-content;
+        width: calc(100vw - (2 * 3vw) - 10px); // Account for scrollbar width
         overflow: hidden;
         position: relative;
         border: 1px solid #0000;
@@ -70,7 +70,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            width: calc(100vw - (2 * 3vw) - 10px); // Account for scrollbar width
+            width: 100%;
 
             .nav-menu-list-item {
                 display: flex;
