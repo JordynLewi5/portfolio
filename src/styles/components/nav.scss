@@ -16,7 +16,9 @@
         height: 30px;
         padding: 10px;
         background-color: #0000;
-        transition: opacity .5s ease, box-shadow .5s ease, background-color .5s ease;
+        transition: opacity .5s ease, 
+            box-shadow .5s ease, 
+            background-color .5s ease;
 
         .nav-hamburger-line {
             background-color: $primary-light;
@@ -33,14 +35,15 @@
 
     .nav-connection-line {
         position: relative;
-        background-color: $primary-dark;
+        background-color: #0000;
         left: 23px;
         width: 4px;
         padding: 0;
-        transform: scaleY(1.05);
         border-left: 1px solid $primary-light;
         border-right: 1px solid $primary-light;
-        transition: padding .5s ease, box-shadow .5s ease;
+        transition: padding .5s ease, 
+            box-shadow .5s ease, 
+            background-color .5s ease;
     }
 
     .nav-menu {
