@@ -7,8 +7,8 @@
     background: $pastel-gradient;        
     // background-image: url('/public/images/dots-and-lines.svg');
     background-attachment: fixed;
-    padding-left: calc($margin * 1.5);
-    padding-right: calc($margin * 1.5);
+    padding-left: $margin;
+    padding-right: $margin;
     padding-bottom: calc($margin + 80px);
     padding-top: calc($margin / 2 + 80px);
     // inset shadow
