@@ -29,7 +29,7 @@
         &:hover {
             cursor: pointer;
             opacity: 1;
-            box-shadow: #fffa 0px 0px 20px;
+            box-shadow: rgba(239, 174, 253, 0.667) 0px 0px 20px;
         }
     }
 
@@ -108,7 +108,7 @@
         
         .nav-hamburger {
             opacity: 1;
-            box-shadow: #fffa 0px 0px max(100vw, 100vh) max(100vw, 100vh);
+            box-shadow: rgba(239, 174, 253, 0.667) 0px 0px max(100vw, 100vh) max(100vw, 100vh);
             background-color: $primary-dark;
         }
 
