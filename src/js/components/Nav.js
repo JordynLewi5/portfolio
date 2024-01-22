@@ -7,6 +7,7 @@ function Nav() {
     useEffect(() => {
         const nav = document.querySelector('.nav');
         const nav_hamburger = document.querySelector('.nav-hamburger');
+        const nav_hamburger_lines = document.querySelectorAll('.nav-hamburger-line');
         const nav_menu = document.querySelector('.nav-menu');
         
         nav_hamburger.addEventListener('click', () => {
@@ -18,7 +19,11 @@ function Nav() {
         });
         
         document.addEventListener('click', (e) => {
-            if (e.target !== nav_hamburger && e.target !== nav_menu) {
+            if (e.target !== nav_hamburger 
+                && e.target !== nav_menu 
+                && e.target !== nav_hamburger_lines[0] 
+                && e.target !== nav_hamburger_lines[1] 
+                && e.target !== nav_hamburger_lines[2]) {
                 nav.classList.remove('active');
             }
         })
