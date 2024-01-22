@@ -16,6 +16,12 @@ function Nav() {
         nav_menu.addEventListener('click', () => {
             nav.classList.toggle('active');
         });
+        
+        document.addEventListener('click', (e) => {
+            if (e.target !== nav_hamburger && e.target !== nav_menu) {
+                nav.classList.remove('active');
+            }
+        })
     }, []);
 
     return (

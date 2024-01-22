@@ -33,10 +33,13 @@
 
     .nav-connection-line {
         position: relative;
-        background-color: $primary-light;
-        left: 26px;
-        width: 1px;
+        background-color: $primary-dark;
+        left: 23px;
+        width: 4px;
         padding: 0;
+        transform: scaleY(1.05);
+        border-left: 1px solid $primary-light;
+        border-right: 1px solid $primary-light;
         transition: padding .5s ease, box-shadow .5s ease;
     }
 
@@ -75,7 +78,12 @@
                 border-radius: 10px;
                 margin: 7px;
                 padding: 20px;
-                transition: background .5s ease, border .5s ease;
+                transition: background .5s ease, 
+                    border .5s ease, 
+                    background-color .5s ease,
+                    box-shadow 5s ease;
+
+                overflow: hidden;
 
                 .nav-menu-list-item-text {
                     text-decoration: none;
@@ -84,7 +92,6 @@
                     background-color: #0000;
                     transition: box-shadow .5s ease, color 1s ease;
                     text-align: left;
-                    border-radius: 100%;
                 }
 
                 .nav-menu-list-item-selector {
@@ -104,13 +111,13 @@
         
         .nav-hamburger {
             opacity: 1;
-            box-shadow: $primary-light 0px 0px 100px 100px;
-            background-color: #0005;
+            box-shadow: $primary-light 0px 0px max(100vw, 100vh) max(100vw, 100vh);
+            background-color: $primary-dark;
         }
 
         .nav-connection-line {
             padding-bottom: 50px;
-            box-shadow: $primary-light 0px 0px 25px;
+            background-color: $primary-dark;
         }
 
         .nav-menu {
@@ -120,12 +127,11 @@
             align-items: flex-end;
             max-height: 390px;
             border: 1px solid $primary-light;
-            background-color: #0005;
+            background-color: $primary-dark;
 
             .nav-menu-list {
 
                 .nav-menu-list-item {
-                    transition: background-color .5s ease;
                     border: 1px solid $primary-light;
 
                     .nav-menu-list-item-text {
@@ -137,12 +143,6 @@
                     }
 
                     &:hover {
-                        // background-color: #fff3;
-
-                        .nav-menu-list-item-text {
-                            box-shadow: 0 0 300px #ffffff;
-                        }
-
                         .nav-menu-list-item-selector {
                             opacity: 1;
                         }
