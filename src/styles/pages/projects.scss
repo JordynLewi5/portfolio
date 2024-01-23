@@ -1,7 +1,7 @@
 .project-page__wrapper {
     padding-top: calc($margin / 2);
-    padding-left: $margin;
-    padding-right: $margin;
+    padding-left: $margin * 1.5;
+    padding-right: $margin * 1.5;
     padding-bottom: calc($margin / 2);
     min-height: 100vh;
     height: fit-content;
