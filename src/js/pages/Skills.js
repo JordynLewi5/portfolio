@@ -29,6 +29,11 @@ function Skills() {
                     <SkillsCard name="PHP" level={60} offset={-750} href="https://www.php.net/" src="/images/php.svg" alt="PHP" />
                     <SkillsCard name="C++" level={50} offset={-750} href="https://isocpp.org/" src="/images/cpp.svg" alt="C++" />
                 </div>
+                {/* App Development */}
+                <h2>App Development</h2>
+                <div className="skill-card-list app-development">
+                    <SkillsCard name="Flutter" level={70} offset={-750} href="https://flutter.dev/" src="/images/flutter.svg" alt="Flutter" />
+                </div>
                 {/* Database */}
                 <h2>Database</h2>
                 <div className="skill-card-list database">
