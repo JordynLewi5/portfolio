@@ -4,7 +4,7 @@ import CaptionImage from "js/components/CaptionImage";
 function ESBLightsHue() {
     return (
         <ProjectWrapper title="Empire State Building Lights Hue (ESB Lights Hue)">
-            <CaptionImage src="/images/weathervane.png" alt="ESB Lights Hue" caption="Click to view ⮕" className="image-link" href="https://github.com/KineticTeam/esblights-hue"/>
+            <CaptionImage src="/images/weathervane.png" alt="ESB Lights Hue" caption="Click to view ⮕" className="image-link" href="https://github.com/JordynLewi5/esblights-hue"/>
 
             <p>
                 ESB Lights Hue is a Node.js application that was designed to be 
